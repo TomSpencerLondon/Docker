@@ -572,3 +572,13 @@ Layers are shown at the bottom of the meta data
 - The Image ID listed by docker commands (ie 'docker images') is the first 12 characters
 of the hash
 
+### Image Tag Names
+- The hash values of the images are referred to by tag names
+
+### Image tag names
+- The format of the full tag name is: [REGISTRYHOST/][USERNAME/]NAME[:TAG]
+- For Registry Host 'registry.hub.docker.com' is inferred
+- For :TAG -latest is default and inferred
+- Full tag example: registry.hub.docker.com/mongo:latest
+
+
