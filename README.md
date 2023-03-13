@@ -343,9 +343,48 @@ Example:
 
 ```
 
+### Docker for Java Developers
+
+### What is Docker?
+- Docker is a standard for Linux containers
+- A "Container" is an isolated runtime inside of Linux
+- A "Container" provides a private machine like space under Linux
+- Containers will run under any modern Linux Kernel
+
+### Containers can:
+- Have their own process space
+- Their own network interface
+- Run processes as root (inside the container)
+- Have their own disk space
+  - They can share with the host too
+
+<img width="539" alt="image" src="https://user-images.githubusercontent.com/27693622/224767443-94cc271a-a9c4-4a5f-afab-226623e0ae0e.png">
 
 
+### Docker Terminology
+- Docker Image - The representation of a Docker Container. Kind of like a JAR or WAR file in Java
+- Docker Container - The standard runtime of Docker. Effectively a deployed a running Docker image. Like a Spring
+Boot executable
+- Docker Engine - The code which manages Docker stuff. Creates and runs Docker Containers
 
+<img width="291" alt="image" src="https://user-images.githubusercontent.com/27693622/224768279-fe31b4f6-ef5d-46e2-a6ee-2eaf0fe8697c.png">
 
+### Docker - hello world
+```bash
+docker run hello-world
+```
 
+### Dockerhub
+https://hub.docker.com
 
+#### Mysql image
+https://hub.docker.com/_/mysql
+```bash
+docker pull mysql
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+```
+https://hub.docker.com/_/postgres
+```bash
+docker pull postgres
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
