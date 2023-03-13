@@ -416,3 +416,18 @@ To run on 27017 locally use:
 docker run -p 27017:271017 -d mongo
 ```
 
+### What is a Docker image?
+- An image defines a Docker Container
+  - Similar in concept to a snapshot of a VM
+  - or a class vs an instance of the class
+- Images immutable
+  - once built, the files making the image do not change
+
+### Image Layers
+- Images are built in layers
+- Each layer is an immutable file, but is a colleciton of files and directories
+- Layers receive an ID, calculated via a SHA 256 hash of the layer contents
+  - Thus if the layer contents change the SHA 256 hash changes also
+
+
+
