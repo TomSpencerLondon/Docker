@@ -387,4 +387,32 @@ https://hub.docker.com/_/postgres
 ```bash
 docker pull postgres
 docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+https://hub.docker.com/r/nginxdemos/hello/
+Run nginx to show in browser on port 8085 locally:
+```bash
+docker run -p 8085:80 -d nginx
 ```
+
+https://hub.docker.com/_/mongo
+Run mongo database:
+```bash
+docker run --name some-mongo -d mongo:tag
+```
+Run mongo database with exposed local port:
+```bash
+docker run -d  --name mongo-on-docker  -p 27888:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
+```
+- docker run runs the image and starts the container
+- -d runs the container in background, so that we are free to use the current terminal instance
+- --name mongo-on-docker defines a friendly name for the container
+- -p 27888:27017 declares that the local port 27888 is mapped to the internal 27017 port
+- -e MONGO_INITDB_ROOT_USERNAME=mongoadmin sets the root username (-e sets the environment variables)
+- -r MONGO_INITDB_ROOT_PASSWORD=secret sets the root password;
+- mongo is the name of the image to run;
+
+To run on 27017 locally use:
+```bash
+docker run -p 27017:271017 -d mongo
+```
+
