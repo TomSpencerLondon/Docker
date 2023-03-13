@@ -413,7 +413,7 @@ docker run -d  --name mongo-on-docker  -p 27888:27017 -e MONGO_INITDB_ROOT_USERN
 
 To run on 27017 locally use:
 ```bash
-docker run -p 27017:271017 -d mongo
+docker run -p 27017:27017 -d mongo
 ```
 
 ### What is a Docker image?
